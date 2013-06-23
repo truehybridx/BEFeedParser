@@ -38,10 +38,10 @@ https://github.com/mwaterfall/MWFeedParser
 	-(void)commentFailedToPost;
 	-(void)commentPostedSuccessfully;
 
-3. Create and allocate a BEFeedParser object
+3. Create and allocate a BEFeedParser object.
 	BEFeedParser *parser = [[BEFeedParser alloc] init];
 
-4. Set the delegate
+4. Set the delegate.
 	parser.delegate = self;
 
 5. Call one of the following with a URL to the JSON API (http://wordpress.com/?json=1)
