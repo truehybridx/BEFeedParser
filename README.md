@@ -18,7 +18,9 @@ https://github.com/mwaterfall/MWFeedParser
 ## Required Libraries
 
 * AFNetworking
+	https://github.com/AFNetworking/AFNetworking
 * SBJSON (For pre-iOS 5)
+	https://github.com/stig/json-framework
 
 
 ## Usage
