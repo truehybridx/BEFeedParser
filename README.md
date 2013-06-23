@@ -70,21 +70,21 @@ TIP: In the apps I use this in, I used the following string appended to the webs
 BEArticle - object representing a Wordpress Article
 
 Data:
-	NSString *article_id;
-    	NSString *title;	// This may contain HTML.
-    	NSString *content;	// This contains raw HTML from the article.
-    	NSString *url;
-    	NSString *thumbnail;	// This contains the link to the Featured Image.
-    	NSString *author;
-    	NSString *commentCount;
+- NSString *article_id;
+- NSString *title;	// This may contain HTML.
+- NSString *content;	// This contains raw HTML from the article.
+- NSString *url;
+- NSString *thumbnail;	// This contains the link to the Featured Image.
+- NSString *author;
+- NSString *commentCount;
 
 
 BEComment - object representing a Wordpress Comment
 
 Data:
-	NSString *comment_Id;
-    	NSString *author;
-    	NSString *content;	// This contains raw HTML from the comment.
+- NSString *comment_Id;
+- NSString *author;
+- NSString *content;	// This contains raw HTML from the comment.
 
 * HTML is left in case you want the styling as it appears on the website. GoogleToolBox has functions that will strip HTML from the string.
 
