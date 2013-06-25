@@ -29,23 +29,23 @@ https://github.com/mwaterfall/MWFeedParser
 
 2. Implement the following delegate methods:  
 
-    // Called on delegate giving it an array of article objects
-    -(void)articlesDownloaded:(NSArray*)articles;
-    // Called on delegate giving it a single article object
-    -(void)singleArticleDownloaded:(id)article;
-    // Called on delegate giving it an array of comment objects
-    -(void)commentsDownloaded:(NSArray*)comments;
-    // Called on failure or success of posting comments
-    -(void)commentFailedToPost;
-    -(void)commentPostedSuccessfully;
+    // Called on delegate giving it an array of article objects  
+    -(void)articlesDownloaded:(NSArray*)articles;  
+    // Called on delegate giving it a single article object  
+    -(void)singleArticleDownloaded:(id)article;  
+    // Called on delegate giving it an array of comment objects  
+    -(void)commentsDownloaded:(NSArray*)comments;  
+    // Called on failure or success of posting comments  
+    -(void)commentFailedToPost;  
+    -(void)commentPostedSuccessfully;  
 
 3. Create and allocate a BEFeedParser object:  
 
-BEFeedParser *parser = [[BEFeedParser alloc] init];
+    BEFeedParser *parser = [[BEFeedParser alloc] init];  
 
-4. Set the delegate:  
+4. Set the delegate:   
 
-parser.delegate = self;
+    parser.delegate = self;
 
 5. Call one of the following with a URL to the JSON API (http://wordpress.com/?json=1)  
 
