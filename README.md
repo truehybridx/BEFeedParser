@@ -1,3 +1,6 @@
+# Depreciated
+This project has not been touched since 2013.
+
 # BEFeedParser - Wordpress JSON Processor for iOS
 
 Loosely based off the idea behind MWFeedParser
