@@ -28,7 +28,7 @@ https://github.com/mwaterfall/MWFeedParser
 1. Set your object as a BEFeedParserDelegate  
 
 2. Implement the following delegate methods:  
-
+    ```objc
     // Called on delegate giving it an array of article objects  
     -(void)articlesDownloaded:(NSArray*)articles;  
     // Called on delegate giving it a single article object  
@@ -38,36 +38,38 @@ https://github.com/mwaterfall/MWFeedParser
     // Called on failure or success of posting comments  
     -(void)commentFailedToPost;  
     -(void)commentPostedSuccessfully;  
-
+    ```
 3. Create and allocate a BEFeedParser object:  
-
+    ```objc
     BEFeedParser *parser = [[BEFeedParser alloc] init];  
-
+    ```
 4. Set the delegate:   
-
+    ```objc
     parser.delegate = self;
-
+    ```
 5. Call one of the following with a URL to the JSON API (http://wordpress.com/?json=1)  
-
+    ```objc
     // Downloads articles, then calls [delegate articlesDownloaded:]
     [parser downloadArticlesWithURL:url];
     // Downloads single article, then calls [delegate singleArticleDownloaded:]
     [parser downloadSingleArticleWithURL:url];
     // Downloads comments, then calls [delegate commentsDownloaded:]
     [parser downloadCommentsWithURL:url];
-	
+    ```
 * If you experience weirdness, check what is returned by opening a web browser to: yoursite.com/?json=1
 
 TIP: In the apps I use this in, I used the following string appended to the website URL + a page number so more articles can be downloaded later.  
-
-"?json=1&include=title,author,status,thumbnail,url,content,comment_count&count=10&page="
+    ```
+    "?json=1&include=title,author,status,thumbnail,url,content,comment_count&count=10&page="
+    ```
 
 ## Send comments
 
 1. Create a BEFeedParser object
 2. Call the function, passing the URL of the article to comment on  
+    ```objc
     [feedParser postCommentWithName:@"Name" email:@"Email" message:@"A Message" url:urlOfPost postID:idOfThePost
-
+    ```
 
 ## Data Structures
 
